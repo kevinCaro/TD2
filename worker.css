@@ -1,0 +1,28 @@
+.progress{
+	margin-top: 10px;
+}
+
+.form-group{
+	margin-top: 10px;
+}
+
+.row1{
+	padding-bottom: 2px;
+}
+
+#affichage{
+	text-align:center;
+	vertical-align:center;
+}
+
+h1{
+	font-size:25px;
+	margin-bottom:0px;
+	margin-top:15px;
+}
+
+p1{
+	font-size:15px;
+	color:gray;
+}
+
