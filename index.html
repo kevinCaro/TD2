@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>TD2 : Compteur de jetons</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="worker.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -8,31 +9,7 @@
 	<script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-
-
-<script>
-var w;
-
-function startWorker() {
-    if(typeof(Worker) !== "undefined") {
-        if(typeof(w) == "undefined") {
-            w = new Worker("worker.js");
-        }
-        w.onmessage = function(event) {
-            document.getElementById("result").innerHTML = event.data;
-        };
-    } else {
-      
-    }
-}
-
-function stopWorker() { 
-    w.terminate();
-    w = undefined;
-}
-</script>
-
-
+<h1>TD2 : Compteur de jetons</h1>
 <div class="container-fluid">
 	<div class = "col-md-8">
 		<div class="form-group">
@@ -42,23 +19,23 @@ function stopWorker() {
 	<div class = "col-md-4">
 		<div class="row">
 			<div class="progress" display="relative">
-  				<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+  				<div id="progressBar" class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
   				ria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%" padding="0px">
     				40% 
   				</div>
 			</div>	
 		</div>
-		<div class="row">
+		<div class="row" id="boutons_jetons">
 			<div class = "col-md-6">
-				<div class="row1">
-					<button type="button" onclick="startWorker()" class="btn btn-primary btn-block">Compter!</button>
+				<div class="row1" id="boutons">
+					<button type="button" class="btn btn-primary btn-block" id="countButton">Compter!</button>
 				</div>	
-				<div class="row2">
-					<button type="button" onclick="stopWorker()" class="btn btn-danger btn-block disabled">Annuler!</button>
+				<div class="row2" id="boutons">
+					<button type="button" class="btn btn-danger btn-block disabled" id="cancelButton">Annuler!</button>
 				</div>	
 			</div>
 			<div class = "col-md-6" id="affichage">
-  				<h1>0</h1>
+  				<h1 id="result">0</h1>
   				<p1>Jetons</p1>
 			</div>
 		</div>
