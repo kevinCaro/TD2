@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TD2 : Compteur de jetons</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="worker.css">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="main.js"></script>
+	<title>TD2 : Compteur de jetons</title> <!-- Titre de l'application -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> <!-- css Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="worker.css"> <!-- css Worker-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script> <!-- librairie JQuery -->
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <!-- librairie Bootstrap -->
+	<script type="text/javascript" src="main.js"></script> <!-- notre code javascript -->
 </head>
 <body>
-<h1>TD2 : Compteur de jetons</h1>
-<div class="container-fluid">
-	<div class = "col-md-8">
-		<div class="form-group">
+<h1>TD2 : Compteur de jetons</h1> 
+<div class="container-fluid"> <!-- contient tout l'interface -->
+	<div class = "col-md-8"> <!-- contient la partie gauche de l'interface  -->
+		<div class="form-group"> <!-- contient la zone de texte -->
   			<textarea class="form-control" rows="5" id="comment"></textarea>
 		</div>
 	</div>
-	<div class = "col-md-4">
-		<div class="row">
-			<div class="progress" display="relative">
+	<div class = "col-md-4"> <!-- contient la partie droite de l'interface-->
+		<div class="row">  <!-- contient la partie superieur droit de l'interface-->
+			<div class="progress" display="relative"> <!-- contient la barre de progression-->
   				<div id="progressBar" class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
-  				ria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%" padding="0px">
-    				40% 
+  				ria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%" padding="0px">
+    				0% 
   				</div>
 			</div>	
 		</div>
-		<div class="row" id="boutons_jetons">
-			<div class = "col-md-6">
-				<div class="row1" id="boutons">
+		<div class="row" id="boutons_jetons">  <!-- contient la partie inferieur droit de l'interface-->
+			<div class = "col-md-6"> <!-- contient les boutons -->
+				<div class="row1" id="boutons"> <!-- contient le bouton compter -->
 					<button type="button" class="btn btn-primary btn-block" id="countButton">Compter!</button>
 				</div>	
-				<div class="row2" id="boutons">
+				<div class="row2" id="boutons">  <!-- contient le bouton annuer-->
 					<button type="button" class="btn btn-danger btn-block disabled" id="cancelButton">Annuler!</button>
 				</div>	
 			</div>
-			<div class = "col-md-6" id="affichage">
+			<div class = "col-md-6" id="affichage">  <!-- contient l'etiquette ou sera afficher le nombre d'etiquette -->
   				<h1 id="result">0</h1>
   				<p1>Jetons</p1>
 			</div>
