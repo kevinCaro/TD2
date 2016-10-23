@@ -1,13 +1,13 @@
 h1{
-	text-align: center;
+	text-align: center; 
 }
 
 .progress{
-	margin-top: 10px;
+	margin-top: 10px; /* ajout de l'espace pour s'ajuster au modele */ 
 }
 
 .form-group{
-	margin-top: 10px;
+	margin-top: 10px; /* ajout de l'espace pour s'ajuster au modele */ 
 }
 
 .row1{
